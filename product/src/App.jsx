@@ -1,24 +1,19 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import StatsSection from "./components/StatsSection";
-import EnterpriseFeatures from "./components/EnterpriseFeatures";
-import EnterpriseTestimonials from "./components/EnterpriseTestimonials";
-import EnterpriseDemo from "./components/EnterpriseDemo";
-import Footer from "./components/Footer";
-
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import RoleSelection from "./pages/RoleSelection";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <StatsSection/>
-      <EnterpriseFeatures/>
-      <EnterpriseTestimonials/>
-      <EnterpriseDemo/>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/role" element={<RoleSelection />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login/>} />
+
+    </Routes>
   );
 }
 

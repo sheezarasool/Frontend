@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +14,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
-              Smart<span className="text-blue-600">Resume</span>
-            </h2>
+          <div className="flex-shrink-0 flex items-center">
+          <Logo/>
           </div>
 
           {/* Desktop Navigation */}
